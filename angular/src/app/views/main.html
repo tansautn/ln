@@ -1,0 +1,121 @@
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" hide-print="" md-component-id="left" class="site-sidenav md-sidenav-left md-whiteframe-z2 hide-print md-closed ng-isolate-scope _md md-locked-open" tabindex="-1">
+
+  <header class="nav-header">
+    <a class="docs-logo" ng-href="/" href="/">
+      <img alt="" src="assets/svg-icons/angular-logo.svg">
+      <h1 class="docs-logotype md-heading">Angular Material</h1>
+    </a>
+  </header>
+
+  <ul class="skip-links">
+    <li class="md-whiteframe-z2">
+      <a  class="md-button md-ink-ripple"><span class="ng-scope">Skip to content</span></a>
+    </li>
+  </ul>
+
+  <md-content role="navigation" flex="" class="_md flex">
+    <ul class="docs-menu">
+      <li>
+        <h2 id="heading_DocumentationVersion" class="menu-heading md-subhead">
+          Accounts Checker
+        </h2>
+      </li>
+      <li ng-repeat="item in vm.menuItems" layout="column" layout-align="center center"
+             flex class="capitalize" ng-click="vm.selectItem(item)"
+             ui-sref-active="md-warn" ui-sref="{{item.sref}}">
+        <a title="{{item.name}}" class="md-button md-ink-ripple">{{item.name}}</a>
+      </li>
+    </ul>
+  </md-content>
+</md-sidenav>
+<div flex="" role="main" tabindex="-1" layout="column" class="layout-column flex">
+  <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar _md _md-toolbar-transitions">
+
+    <div tabindex="-1" class="md-toolbar-tools docs-toolbar-tools">
+      <md-button  class="md-icon-button md-button md-ink-ripple hide-gt-sm" aria-label="Toggle Menu" hide-gt-sm="" ng-click="vm.toggleItemsList()">
+        <md-icon md-svg-src="assets/svg-icons/ic_menu_24px.svg" class="ng-scope" aria-hidden="true"></md-icon>
+      </md-button>
+      <div class="fill-height layout-row flex" flex="" layout="row">
+        <h2 class="md-toolbar-item md-breadcrumb md-headline">
+          <!-- ngIf: menu.currentPage.name !== menu.currentSection.name -->
+          <span class="md-breadcrumb-page">Introduction</span>
+        </h2>
+
+        <span flex="" class="flex"></span> <!-- use up the empty space -->
+
+        <div layout="row" class="md-toolbar-item docs-tools layout-row">
+          <!--Want more space for btns ? It here-->
+        </div>
+      </div>
+    </div>
+
+  </md-toolbar>
+
+<md-content flex="" layout="column" md-scroll-y="" class="_md layout-column flex">
+  <!-- ngView:  -->
+    <div ui-view class="docs-ng-view layout-padding ng-scope flex-noshrink" flex="noshrink" layout-padding=""></div>
+
+    <div layout-align="center center" flex="noshrink" layout="row" class="layout-align-center-center layout-row flex-noshrink">
+      <div flex="" id="license-footer" class="ng-binding flex">
+        Powered by Google &copy;2014&ndash;2016.
+        Code licensed under the <a class="md-accent" ng-href="./license" href="./license">MIT License</a>.
+        Documentation licensed under
+        <a class="md-default-theme md-accent" target="_blank" href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
+      </div>
+    </div>
+  </md-content>
+
+</div>
+<!--
+<md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left"
+            class="md-whiteframe-z2 md-sidenav-left">
+  &lt;!&ndash;LOGO&ndash;&gt;
+  <md-toolbar md-theme="dark" class="md-hue-1 md-whiteframe-z2">
+    <md-button layout="row" layout-align="center center" class="md-toolbar-tools md-warn">
+      <h1>X-Project</h1>
+    </md-button>
+  </md-toolbar>
+  &lt;!&ndash;SIDEBAR BTNs&ndash;&gt;
+  <md-button ng-repeat-start="item in vm.menuItems" layout="column" layout-align="center center"
+             flex class="capitalize" ng-click="vm.selectItem(item)"
+             ui-sref-active="md-warn" ui-sref="{{item.sref}}">
+    <div hide-sm hide-md class="md-tile-content">
+      <i class="material-icons md-36">{{item.icon}}</i>
+    </div>
+    <div class="md-tile-content">
+      {{item.name}}
+    </div>
+  </md-button>
+  <md-divider ng-repeat-end></md-divider>
+  <md-button ng-click="vm.showActions($event)" layout-align="center center">
+    <div class="md-tile-content">
+      Actions
+    </div>
+  </md-button>
+</md-sidenav>
+
+<div layout="column" flex>
+  &lt;!&ndash;NAVBAR&ndash;&gt;
+  <md-toolbar layout="row" layout-align="center center">
+    <section layout-align="start center" layout-fill flex>
+      <md-button hide-gt-sm ng-click="vm.toggleItemsList()" aria-label="Menu">
+        <i class="material-icons">menu</i>
+      </md-button>
+    </section>
+    <section layout-align="end center">
+      <md-button class="md-raised" aria-label="Start">
+        <i class="material-icons">play_circle_outline</i> <span>Start</span>
+      </md-button>
+      <md-button class="md-raised" aria-label="Pause">
+        <i class="material-icons">pause_circle_outline</i> <span>Pause</span>
+      </md-button>
+      <md-button class="md-raised" aria-label="Stop">
+        <i class="material-icons">stop</i> <span>Stop</span>
+      </md-button>
+    </section>
+  </md-toolbar>
+&lt;!&ndash;CONTENT&ndash;&gt;
+  <md-content flex class="md-padding page-content">
+    <div ui-view></div>
+  </md-content>
+</div>-->

@@ -1,0 +1,59 @@
+<!--
+/*
+         M""""""""`M            dP                     
+         Mmmmmm   .M            88                     
+         MMMMP  .MMM  dP    dP  88  .dP   .d8888b.     
+         MMP  .MMMMM  88    88  88888"    88'  `88     
+         M' .MMMMMMM  88.  .88  88  `8b.  88.  .88     
+         M         M  `88888P'  dP   `YP  `88888P'     
+         MMMMMMMMMMM    -*-  Created by Zuko  -*-      
+
+         * * * * * * * * * * * * * * * * * * * * *     
+         * -    - -     S.Y.M.L.I.E     - -    - *     
+         * -  Copyright © 2016 (Z) Programing  - *     
+         *    -  -  All Rights Reserved  -  -    *     
+         * * * * * * * * * * * * * * * * * * * * *     
+*//**
+ *   *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *   *
+ * @PROJECT    : X - Project [ Z-Dev ]
+ * @AUTHOR     : Zuko
+ * @COPYRIGHT  : © 2016 Z-Programing a.k.a Zuko
+ * @LINK       : http://www.zuko.pw/
+ * @FILE       : sainsburys.html
+ * @CREATED    : 08:44 , 20/Nov/2016
+ * @DETAIL     :  
+*   *  *  *  *  *  *  *  *  *  *  *  *  *  *  *  *   *
+**/-->
+
+<div class="demos-doc">
+  <section class="demo-container md-whiteframe-z1 show-source">
+    <md-toolbar class="demo-toolbar md-primary _md _md-toolbar-transitions">
+      <h3 style="margin-left: 1%;margin-right: 1%" class="md-title">Sainsburys Checker</h3>
+      <span flex="" class="flex"></span>
+    </md-toolbar>
+    <md-content layout-padding>
+    <div style="margin-left: 1%;margin-right: 1%">
+      <form name="chkFrm" ng-submit="vm.onFrmSubmit($event)">
+        <div layout="column">
+          <md-input-container class="md-block">
+            <label for="txtArea1">Mailpass</label>
+            <textarea ng-model="vm.chkFrm.mailpass" name="chkFrm.mailpass" id="txtArea1" aria-label="Mail & pass list" rows="5" md-select-on-focus></textarea>
+          </md-input-container>
+          <md-input-container class="md-block">
+            <label for="txtArea2">Proxy / Socks / SSH</label>
+            <textarea ng-model="vm.chkFrm.proxy" name="chkFrm.proxy" id="txtArea2" rows="5" aria-label="Proxy List" md-select-on-focus></textarea>
+          </md-input-container>
+        </div>
+        <div layout="row">
+        <button class="md-button md-ink-ripple md-raised md-primary" type="submit" aria-label="Submit">Submit</button>
+        <md-button class="md-raised md-accent" aria-label="Reset">Reset</md-button>
+      </div>
+
+      <p style="font-size:.8em; width: 100%; text-align: center;">
+        Make sure to include <a href="https://docs.angularjs.org/api/ngMessages" target="_blank">ngMessages</a> module when using ng-message markup.
+      </p>
+      </form>
+    </div>
+    </md-content>
+  </section>
+</div>

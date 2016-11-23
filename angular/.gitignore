@@ -1,0 +1,7 @@
+node_modules/
+public/bower/
+.sass-cache/
+.tmp/
+dist/
+.idea/
+.publish/
