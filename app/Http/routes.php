@@ -11,11 +11,11 @@
 |
 */
 
-$app->get('/', function () use ($app)
+$router->get('/', function () use ($app)
 {
     return $app->version();
 });
-$app->post('account/sainsburys', [
+$router->post('account/sainsburys', [
     'as' => 'account.sainsburys',
     'uses' => 'Account\SainsBurysController@doCheck',
 ]);

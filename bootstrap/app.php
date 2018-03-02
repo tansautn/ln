@@ -104,13 +104,14 @@ $app->configureMonologUsing(function() use ($monolog) {
     return $monolog;
 });
 /* Normal routes */
-$app->group(['namespace' => 'App\Http\Controllers'], function() use ($app)
-{
-    require __DIR__.'/../app/Http/routes.php';
+$app->router->group([
+                        'namespace' => 'App\Http\Controllers',
+                    ], function ($router) {
+    require __DIR__.'/../routes/web.php';
 });
 
 /* API Routes */
-$api->version('v1', function() use ($api) {
+$api->version('v1',  function ($router) {
     require __DIR__.'/../app/Http/api.routes.php';
 });
 
